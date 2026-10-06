@@ -1,0 +1,588 @@
+<!-- =====================================================
+     FINOVA — ASK THE FOUNDER
+     ===================================================== -->
+
+<section class="section" id="community">
+
+  <div class="section-head reveal">
+
+    <div>
+
+      <div class="eyebrow">
+        COMMUNITY · FINOVA
+      </div>
+
+      <h2>
+        Ask the <span>Founder.</span>
+      </h2>
+
+      <p>
+        Have a question, idea, problem or feedback?
+        Send it directly to the founder.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="ask-founder-box reveal">
+
+    <!-- LEFT -->
+
+    <div class="ask-founder-info">
+
+      <div class="eyebrow">
+        DIRECT MESSAGE
+      </div>
+
+      <h3>
+        What's on your mind?
+      </h3>
+
+      <p>
+        Tell us what you're thinking. Ask about finance,
+        FINOVA, an idea, or anything you'd like to discuss.
+      </p>
+
+      <div class="founder-point">
+        <span>✓</span>
+        Real questions from real people
+      </div>
+
+      <div class="founder-point">
+        <span>✓</span>
+        Personally reviewed
+      </div>
+
+      <div class="founder-point">
+        <span>✓</span>
+        Reply directly by email
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT -->
+
+    <div class="ask-founder-form">
+
+      <form id="founderForm">
+
+        <div class="form-field">
+
+          <label for="founderName">
+            NAME
+          </label>
+
+          <input
+            type="text"
+            id="founderName"
+            placeholder="Your name"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-field">
+
+          <label for="founderEmail">
+            EMAIL
+          </label>
+
+          <input
+            type="email"
+            id="founderEmail"
+            placeholder="you@example.com"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-field">
+
+          <label for="founderQuestion">
+            YOUR QUESTION
+          </label>
+
+          <textarea
+            id="founderQuestion"
+            placeholder="Write your question, problem, idea or feedback..."
+            required
+          ></textarea>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="ask-founder-button"
+        >
+
+          <span>SEND MESSAGE</span>
+
+          <span>→</span>
+
+        </button>
+
+
+        <div
+          id="founderMessage"
+          class="founder-message"
+        ></div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     ASK THE FOUNDER CSS
+     ===================================================== -->
+
+<style>
+
+.ask-founder-box {
+
+  display: grid;
+
+  grid-template-columns:
+    .9fr 1.1fr;
+
+  gap: 30px;
+
+  padding: 34px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:
+    var(--radius);
+
+  background:
+    var(--panel);
+
+  box-shadow:
+    var(--shadow);
+
+}
+
+
+.ask-founder-info {
+
+  padding: 15px;
+
+}
+
+
+.ask-founder-info h3 {
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size:
+    clamp(32px, 4vw, 48px);
+
+  line-height:
+    1.05;
+
+  margin:
+    10px 0 18px;
+
+}
+
+
+.ask-founder-info p {
+
+  max-width:
+    450px;
+
+  color:
+    var(--muted);
+
+  line-height:
+    1.7;
+
+  margin-bottom:
+    25px;
+
+}
+
+
+.founder-point {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    12px;
+
+  margin:
+    14px 0;
+
+  color:
+    var(--text);
+
+  font-size:
+    14px;
+
+}
+
+
+.founder-point span {
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  width:
+    25px;
+
+  height:
+    25px;
+
+  border-radius:
+    50%;
+
+  color:
+    var(--green);
+
+  background:
+    rgba(80,230,162,.10);
+
+  border:
+    1px solid
+    rgba(80,230,162,.15);
+
+}
+
+
+.ask-founder-form {
+
+  padding:
+    5px;
+
+}
+
+
+.form-field {
+
+  margin-bottom:
+    18px;
+
+}
+
+
+.form-field label {
+
+  display:
+    block;
+
+  margin-bottom:
+    8px;
+
+  font-size:
+    11px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    .12em;
+
+  color:
+    var(--muted);
+
+}
+
+
+.form-field input,
+.form-field textarea {
+
+  width:
+    100%;
+
+  box-sizing:
+    border-box;
+
+  padding:
+    14px 15px;
+
+  border:
+    1px solid var(--line);
+
+  border-radius:
+    12px;
+
+  background:
+    var(--bg2);
+
+  color:
+    var(--text);
+
+  font-family:
+    inherit;
+
+  font-size:
+    14px;
+
+  outline:
+    none;
+
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease;
+
+}
+
+
+.form-field textarea {
+
+  min-height:
+    145px;
+
+  resize:
+    vertical;
+
+}
+
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+
+  color:
+    #657386;
+
+}
+
+
+.form-field input:focus,
+.form-field textarea:focus {
+
+  border-color:
+    rgba(53,221,255,.55);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(53,221,255,.07);
+
+}
+
+
+.ask-founder-button {
+
+  width:
+    100%;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    8px;
+
+  padding:
+    15px 20px;
+
+  border:
+    0;
+
+  border-radius:
+    12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--cyan),
+      var(--blue)
+    );
+
+  color:
+    #031019;
+
+  font-family:
+    inherit;
+
+  font-size:
+    13px;
+
+  font-weight:
+    900;
+
+  cursor:
+    pointer;
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+
+}
+
+
+.ask-founder-button:hover {
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 12px 30px
+    rgba(53,221,255,.15);
+
+}
+
+
+.ask-founder-button:active {
+
+  transform:
+    translateY(0);
+
+}
+
+
+.founder-message {
+
+  margin-top:
+    13px;
+
+  font-size:
+    13px;
+
+  color:
+    var(--green);
+
+}
+
+
+@media (max-width: 800px) {
+
+  .ask-founder-box {
+
+    grid-template-columns:
+      1fr;
+
+    padding:
+      22px;
+
+  }
+
+
+  .ask-founder-info {
+
+    padding:
+      5px;
+
+  }
+
+
+  .ask-founder-info h3 {
+
+    font-size:
+      34px;
+
+  }
+
+}
+
+</style>
+
+
+<!-- =====================================================
+     ASK THE FOUNDER JAVASCRIPT
+     ===================================================== -->
+
+<script>
+
+document
+  .getElementById("founderForm")
+  .addEventListener(
+    "submit",
+    function(event) {
+
+      event.preventDefault();
+
+
+      /* YOUR FOUNDER EMAIL */
+
+      const founderEmail =
+        "ayush5292singh@gmail.com";
+
+
+      const name =
+        document
+          .getElementById("founderName")
+          .value
+          .trim();
+
+
+      const email =
+        document
+          .getElementById("founderEmail")
+          .value
+          .trim();
+
+
+      const question =
+        document
+          .getElementById("founderQuestion")
+          .value
+          .trim();
+
+
+      const subject =
+        encodeURIComponent(
+          "FINOVA — Message from " + name
+        );
+
+
+      const body =
+        encodeURIComponent(
+`Hello FINOVA Founder,
+
+Name: ${name}
+
+Email: ${email}
+
+Question / Message:
+${question}
+
+-----------------------
+Sent through FINOVA
+`
+        );
+
+
+      window.location.href =
+        "mailto:" +
+        founderEmail +
+        "?subject=" +
+        subject +
+        "&body=" +
+        body;
+
+
+      document
+        .getElementById("founderMessage")
+        .textContent =
+        "Your email app is opening...";
+
+    }
+  );
+
+</script>
